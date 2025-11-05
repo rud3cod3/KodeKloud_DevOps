@@ -1,0 +1,12 @@
+# Helpfull commands while working with virtualBox
+
+VBoxManage list vms						# List all vm, Usefull when working with headless starts
+VBoxManage startvm "UbuntuServer" --type headless		# For headless start a vm
+VBoxManage list runningvms					# Check running Vms
+VBoxManage controlvm "UbuntuServer" acpipowerbutton		# To shut it down
+VBoxManage controlvm "UbuntuServer" poweroff			# To force stop
+VBoxManage modifyvm "UbuntuServer" --natpf1 "ssh,tcp,,2222,,22"	# Port forwarding
+
+# Auto start VM when machine boots up
+
+VBoxManage modifyvm "UbuntuServer" --autostart-enabled on
